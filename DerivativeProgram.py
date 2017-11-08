@@ -33,4 +33,3 @@ while o<=upperRange:
     data['1Der',o] = getFirstDerivite(o)
     o+= step
     
-print(data['1Der',2])
