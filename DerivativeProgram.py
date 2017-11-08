@@ -46,9 +46,9 @@ while q<=upperRange:
 def getExtrema():
     b = lowerRange
     while b<=upperRange:
-        if data['1Der',b] > 0, and if data['1Der',b+step] < 0:
+        if data['1Der',b] > 0 and if data['1Der',b+step] < 0:
             print('upper extrema')
-        if if data['1Der',b] < 0 and if data['1Der',b+step] > 0:
+        if data['1Der',b] < 0 and if data['1Der',b+step] > 0:
             print('lower extrema')
 getExtrema()
 
