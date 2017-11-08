@@ -5,9 +5,11 @@
 
 terms = int(input('How many terms do you have?'))
 data = {}
-for i in range(1,terms):
-    data['coefficient':i] = float(input('Enter the coefficient for x^'))
+for i in range(1,terms+1):
+    data['coefficient',i] = float(input('Enter the coefficient'))
+    data['exponent',i] = float(input('Enter the exponent'))
 
+lowerRange = float(input('Enter the lower limit'))
+upperRange = float(input('Enter the upper range'))
 
-function = input('Enter a function')
 
