@@ -12,7 +12,7 @@ for i in range(1,terms+1):
 lowerRange = float(input('Enter the lower limit'))
 upperRange = float(input('Enter the upper range'))
 interval = float(input('Enter the interval'))
-
-for i in range(1,terms+1)
-    
-
+lowerRangeValue = 0
+for i in range(1,terms+1):
+    lowerRangeValue += (data['coefficient',i])*((lowerRange)**data['exponent',i])
+print(lowerRangeValue)
