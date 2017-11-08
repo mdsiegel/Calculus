@@ -42,14 +42,17 @@ q = lowerRange
 while q<=upperRange:
     data['2Der',q] = getSecondDerivitive(q)
     q+= step
-    
+
+
 def getExtrema():
     b = lowerRange
     while b<=upperRange:
         if getFirstDerivite(b) > 0 and getFirstDerivite(b+step)<0:
             print('There is an upper extrema at',b)
+            data['upperExtrema',b] = b
         if getFirstDerivite(b) < 0 and getFirstDerivite(b+step)>0:
             print('There is a lower extrema at',b)
+            data['lowerExtrema',b] = b
         b+=step
 getExtrema()
 
