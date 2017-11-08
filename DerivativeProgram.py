@@ -50,6 +50,19 @@ def getExtrema():
 getExtrema()
 
 
+def getPOI():
+    b = lowerRange
+    while b<=upperRange:
+        if getSecondDerivitive(b) > 0 and getSecondDerivitive(b+step)<0:
+            print('There is a POI at',round(b,5))
+        if getSecondDerivitive(b) < 0 and getSecondDerivitive(b+step)>0:
+            print('There is a POI at',round(b,5))
+            
+            
+        b+=step
+getPOI()
+
+
 
 
 
