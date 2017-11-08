@@ -13,6 +13,8 @@ lowerRange = float(input('Enter the lower limit'))
 upperRange = float(input('Enter the upper range'))
 interval = float(input('Enter the interval'))
 lowerRangeValue = 0
-for i in range(1,terms+1):
-    lowerRangeValue += (data['coefficient',i])*((lowerRange)**data['exponent',i])
+func getValue(x):
+    y = 0
+    for i in range(1,terms+1):
+        y += (data['coefficient',i])*((x)**data['exponent',i])
 print(lowerRangeValue)
