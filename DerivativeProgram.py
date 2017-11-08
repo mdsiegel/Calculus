@@ -3,11 +3,10 @@
 
 
 
-degree = int(input('Enter a degree'))
+degree = int(input('How many terms do you have?'))
 for i in range(1,degree):
-    a = float(input('Enter the coefficient for'))
+    a = float(input('Enter the coefficient for x^'))
 
-a = float(input('Enter the a value'))
 
 function = input('Enter a function')
 
