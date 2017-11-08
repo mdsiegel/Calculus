@@ -46,10 +46,13 @@ while q<=upperRange:
 def getExtrema():
     b = lowerRange
     while b<=upperRange:
-        if data['1Der',b] > 0 and if data['1Der',b+step] < 0:
-            print('upper extrema')
-        if data['1Der',b] < 0 and if data['1Der',b+step] > 0:
-            print('lower extrema')
+        if getFirstDerivite(b) > 0 and getFirstDerivite(b+step)<0:
+            print('There is an upper extrema at',b)
+        if getFirstDerivite(b) < 0 and getFirstDerivite(b+step)>0:
+            print('There is a lower extrema at',b)
+        b+=step
 getExtrema()
+
+
 
 
