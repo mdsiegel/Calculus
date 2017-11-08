@@ -24,6 +24,5 @@ while u<=upperRange:
     data['y-value',u] = getValue(u)
     u+= interval
     
-print(data['y-value',3])
 
 
