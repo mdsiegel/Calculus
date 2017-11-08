@@ -28,4 +28,9 @@ def getFirstDerivite(x):
     firstDerivitive = (getValue(x+0.001)-getValue(x-0.001))/(2*0.001)
     return firstDerivitive
 
-
+o = lowerRange
+while o<=upperRange:
+    data['1Der',o] = getFirstDerivite(o)
+    o+= step
+    
+print(data['1Der',2])
