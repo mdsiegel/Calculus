@@ -40,7 +40,10 @@ def getSecondDerivitive(x):
 
 q = lowerRange
 while q<=upperRange:
+    round(q,2)
     data['2Der',q] = getSecondDerivitive(q)
+    print(q)
+    
     q+= step
 
 
