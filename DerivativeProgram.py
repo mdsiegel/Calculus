@@ -19,11 +19,13 @@ def getValue(x):
         y += (data['coefficient',i])*((x)**data['exponent',i])
     return y
 u = lowerRange
-
 while u<=upperRange:
     data['y-value',u] = getValue(u)
     u+= step
     
 
+def getFirstDerivite(x):
+    firstDerivitive = (getValue(x+0.001)-getValue(x-0.001))/(2*0.001)
+    return firstDerivitive
 
 
