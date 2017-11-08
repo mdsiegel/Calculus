@@ -36,5 +36,10 @@ while o<=upperRange:
 def getSecondDerivitive(x):
     secondDerivitive = (getFirstDerivite(x+0.001)-getFirstDerivite(x-.001))/(2*0.001)
     return secondDerivitive
-    
-print(getSecondDerivitive(2))
+
+q = lowerRange
+while q<=upperRange:
+    data['2Der',q] = getSecondDerivitive(q)
+    q+= step
+print(data['2Der',2])
+
