@@ -20,9 +20,10 @@ def getValue(x):
     return y
 u = lowerRange
 
-while 
+while u<=upperRange:
     data['y-value',u] = getValue(u)
+    u+= interval
     
-print(data['y-value',u])
+print(data['y-value',3])
 
 
