@@ -2,6 +2,8 @@
 #DerivitveProgram.py
 
 
+print(.001//1)
+
 precision = 0.00001
 terms = int(input('How many terms do you have?'))
 data = {}
@@ -19,43 +21,34 @@ def getValue(x):
     for i in range(1,terms+1):
         y += (data['coefficient',i])*((x)**data['exponent',i])
     return y
-u = lowerRange
-while u<=upperRange:
-    data['y-value',u] = getValue(u)
-    u+= step
+
     
 #Getting the values for the first derivitive
 def getFirstDerivite(x):
     firstDerivitive = (getValue(x+precision)-getValue(x-precision))/(2*precision)
     return firstDerivitive
 
-o = lowerRange
-while o<=upperRange:
-    data['1Der',o] = getFirstDerivite(o)
-    o+= step
+
 #Getting the values for second derivitive
 def getSecondDerivitive(x):
     secondDerivitive = (getFirstDerivite(x+precision)-getFirstDerivite(x-precision))/(2*precision)
     return secondDerivitive
 
-q = lowerRange
-while q<=upperRange:
-    round(q,2)
-    data['2Der',q] = getSecondDerivitive(q)
-    print(q)
-    
-    q+= step
+
 
 
 def getExtrema():
     b = lowerRange
     while b<=upperRange:
         if getFirstDerivite(b) > 0 and getFirstDerivite(b+step)<0:
-            print('There is an upper extrema at',b)
+            print('There is an upper extrema at',round(b,5))
         if getFirstDerivite(b) < 0 and getFirstDerivite(b+step)>0:
-            print('There is a lower extrema at',b)
+            print('There is a lower extrema at',round(b,5))
+            
+            
         b+=step
 getExtrema()
+
 
 
 
