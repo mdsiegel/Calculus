@@ -4,7 +4,7 @@
 
 print(.001//1)
 
-precision = 0.00001
+precision = 0.000001
 terms = int(input('How many terms do you have?'))
 data = {}
 for i in range(1,terms+1):
@@ -41,9 +41,9 @@ def getExtrema():
     b = lowerRange
     while b<=upperRange:
         if getFirstDerivite(b) > 0 and getFirstDerivite(b+step)<0:
-            print('There is an upper extrema at',round(b,5))
+            print('There is an upper extrema at',b)
         if getFirstDerivite(b) < 0 and getFirstDerivite(b+step)>0:
-            print('There is a lower extrema at',round(b,5))
+            print('There is a lower extrema at',b)
             
             
         b+=step
