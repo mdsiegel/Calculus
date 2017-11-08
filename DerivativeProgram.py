@@ -10,8 +10,8 @@ for i in range(1,terms+1):
     data['exponent',i] = float(input('Enter the exponent'))
 
 lowerRange = float(input('Enter the lower limit'))
-upperRange = float(input('Enter the upper range'))
-interval = float(input('Enter the interval'))
+upperRange = float(input('Enter the upper limit'))
+step = float(input('Enter the step'))
 lowerRangeValue = 0
 def getValue(x):
     y = 0
@@ -22,7 +22,8 @@ u = lowerRange
 
 while u<=upperRange:
     data['y-value',u] = getValue(u)
-    u+= interval
+    u+= step
     
+
 
 
