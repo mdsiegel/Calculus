@@ -34,6 +34,7 @@ while o<=upperRange:
     o+= step
 
 def getSecondDerivitive(x):
-    secondDerivitive = (getFirstDerivite(x+0.001)-getFirstDerivite(x).001))/(2*0.001)
+    secondDerivitive = (getFirstDerivite(x+0.001)-getFirstDerivite(x-.001))/(2*0.001)
+    return secondDerivitive
     
-    
+print(getSecondDerivitive(2))
