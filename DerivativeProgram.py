@@ -2,7 +2,7 @@
 #DerivitveProgram.py
 
 
-
+precision = 0.00001
 terms = int(input('How many terms do you have?'))
 data = {}
 for i in range(1,terms+1):
@@ -25,7 +25,7 @@ while u<=upperRange:
     
 
 def getFirstDerivite(x):
-    firstDerivitive = (getValue(x+0.001)-getValue(x-0.001))/(2*0.001)
+    firstDerivitive = (getValue(x+precision)-getValue(x-precision))/(2*precision)
     return firstDerivitive
 
 o = lowerRange
@@ -34,12 +34,16 @@ while o<=upperRange:
     o+= step
 
 def getSecondDerivitive(x):
-    secondDerivitive = (getFirstDerivite(x+0.001)-getFirstDerivite(x-.001))/(2*0.001)
+    secondDerivitive = (getFirstDerivite(x+precision)-getFirstDerivite(x-precision))/(2*precision)
     return secondDerivitive
 
 q = lowerRange
 while q<=upperRange:
     data['2Der',q] = getSecondDerivitive(q)
     q+= step
-print(data['2Der',2])
+    
+    
+print(getSecondDerivitive(2))
+print(getFirstDerivite(2))
+
 
