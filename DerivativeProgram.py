@@ -18,6 +18,11 @@ def getValue(x):
     for i in range(1,terms+1):
         y += (data['coefficient',i])*((x)**data['exponent',i])
     return y
+u = lowerRange
 
-data['y-values'] = 
+while 
+    data['y-value',u] = getValue(u)
+    
+print(data['y-value',u])
+
 
