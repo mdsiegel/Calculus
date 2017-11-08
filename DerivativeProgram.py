@@ -19,5 +19,5 @@ def getValue(x):
         y += (data['coefficient',i])*((x)**data['exponent',i])
     return y
 
-
+data['y-values'] = 
 
