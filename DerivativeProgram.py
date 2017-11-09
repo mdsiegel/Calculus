@@ -3,8 +3,7 @@
 
 
 print(.001//1)
-localMaxes = 0
-localMins = 0
+
 precision = 0.000001
 terms = int(input('How many terms do you have?'))
 data = {}
@@ -49,19 +48,11 @@ def getExtrema():
             print('There is a lower extrema at',b)
             localMins +=1
             data['lowerMin', localMins] = b
+            b+=step
 
-            
-        b+=step
 getExtrema()
 
-def increasing():
-    if getFirstDerivite(lowerRange) > 0:
-        if upperMaxes > 0:
-            print('Increasing',lowerRange,'to', data['upperMax',1])
-    if getFirstDerivite(lowerRange) < 0:
-        if lowerMins > 0:
-            print('Decreasing',lowerRange,'to', data['lowerMin',1])
-increasing()
+
 
 def getPOI():
     b = lowerRange
@@ -74,7 +65,14 @@ def getPOI():
             
         b+=step
 getPOI()
-
+def increasing():
+    if getFirstDerivite(lowerRange) > 0:
+        if upperMaxes > 0:
+            print('Increasing',lowerRange,'to', data['upperMax',1])
+    if getFirstDerivite(lowerRange) < 0:
+        if localMins > 0:
+            print('Decreasing',lowerRange,'to', data['lowerMin',1])
+increasing()
 
 
 
