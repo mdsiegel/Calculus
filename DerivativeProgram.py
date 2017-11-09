@@ -92,6 +92,24 @@ def getPOI():
             
             
         b+=step
+     if getSecondDerivitive(lowerRange) > 0:
+        if localMaxes > 0:
+            print('Increasing',lowerRange,'to', data['upperMax',1])
+        else:
+            print('Increasing',lowerRange,'to', upperRange)
+    if getSecondDerivitive(lowerRange) < 0:
+        if localMins > 0:
+            print('Decreasing',lowerRange,'to', data['lowerMin',1])
+        
+        else:
+            print('Decreasing',lowerRange,'to', upperRange)
+    if getSecondDerivitive(upperRange)>0:
+        if POItoUp>0:
+            print('Concave up from',data['POIUp',POItoUp],'to',upperRange)
+    if getSecondDerivitive(upperRange)<0:
+        if POItoDown>0:
+            print('Concave down from',data['POIDown',POItoDown],'to',upperRange)
+
 getPOI()
 
 
