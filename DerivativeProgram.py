@@ -3,7 +3,8 @@
 
 
 print(.001//1)
-
+localMaxes = 0
+localMins = 0
 precision = 0.000001
 terms = int(input('How many terms do you have?'))
 data = {}
@@ -42,6 +43,7 @@ def getExtrema():
     while b<=upperRange:
         if getFirstDerivite(b) > 0 and getFirstDerivite(b+step)<0:
             print('There is an upper extrema at',b)
+            data['upperMax', 
         if getFirstDerivite(b) < 0 and getFirstDerivite(b+step)>0:
             print('There is a lower extrema at',b)
             
