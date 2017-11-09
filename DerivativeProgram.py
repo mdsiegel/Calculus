@@ -36,9 +36,10 @@ def getSecondDerivitive(x):
 
 
 
-
 def getExtrema():
     b = lowerRange
+    localMaxes = 0
+    localMins = 0
     while b<=upperRange:
         if getFirstDerivite(b) > 0 and getFirstDerivite(b+step)<0:
             print('There is an upper extrema at',b)
@@ -48,7 +49,19 @@ def getExtrema():
             print('There is a lower extrema at',b)
             localMins +=1
             data['lowerMin', localMins] = b
-            b+=step
+        b+=step
+    if getFirstDerivite(lowerRange) > 0:
+        if data['upperMax',1] =! none:
+            print('Increasing',lowerRange,'to', data['upperMax',1])
+        else:
+            print('Increasing',lowerRange,'to', upperRange)
+    elif getFirstDerivite(lowerRange) < 0:
+        if localMins > 0:
+            print('Decreasing',lowerRange,'to', data['lowerMin',1])
+        
+        else:
+            print('Decreasing',lowerRange,'to', upperRange)
+    
 
 getExtrema()
 
@@ -65,14 +78,7 @@ def getPOI():
             
         b+=step
 getPOI()
-def increasing():
-    if getFirstDerivite(lowerRange) > 0:
-        if upperMaxes > 0:
-            print('Increasing',lowerRange,'to', data['upperMax',1])
-    if getFirstDerivite(lowerRange) < 0:
-        if localMins > 0:
-            print('Decreasing',lowerRange,'to', data['lowerMin',1])
-increasing()
+
 
 
 
