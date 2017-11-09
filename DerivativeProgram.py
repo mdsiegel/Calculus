@@ -81,6 +81,8 @@ getExtrema()
 
 def getPOI():
     b = lowerRange
+    POItoUP=0
+    POItoDown = 0
     while b<=upperRange:
         if getSecondDerivitive(b) > 0 and getSecondDerivitive(b+step)<0:
             print('There is a POI at',b)
