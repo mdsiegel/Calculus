@@ -50,12 +50,13 @@ def getExtrema():
             localMins +=1
             data['lowerMin', localMins] = b
         b+=step
+    #increasing/decreasing
     if getFirstDerivite(lowerRange) > 0:
-        if data['upperMax',1] =! none:
+        if localMaxes > 0:
             print('Increasing',lowerRange,'to', data['upperMax',1])
         else:
             print('Increasing',lowerRange,'to', upperRange)
-    elif getFirstDerivite(lowerRange) < 0:
+    if getFirstDerivite(lowerRange) < 0:
         if localMins > 0:
             print('Decreasing',lowerRange,'to', data['lowerMin',1])
         
