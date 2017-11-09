@@ -1,4 +1,4 @@
-#Matthew Siegel
+#Matthew Siegel Frans Luttmer
 #DerivitveProgram.py
 
 
