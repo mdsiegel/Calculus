@@ -45,10 +45,14 @@ def getExtrema():
             print('There is an upper extrema at',b)
             localMaxes +=1
             data['upperMax', localMaxes] = b
+            if localMins>0:
+                print('Increasing from',data['lowerMin',localMins],'to',b)
         if getFirstDerivite(b) < 0 and getFirstDerivite(b+step)>0:
             print('There is a lower extrema at',b)
             localMins +=1
             data['lowerMin', localMins] = b
+            if localMaxes>0:
+                print('Decreasing from',data['upperMax',localMaxes],'to',b)
         b+=step
     #increasing/decreasing
     if getFirstDerivite(lowerRange) > 0:
