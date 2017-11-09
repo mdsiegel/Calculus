@@ -81,28 +81,40 @@ getExtrema()
 
 def getPOI():
     b = lowerRange
-    POItoUP=0
+    POItoUp=0
     POItoDown = 0
     while b<=upperRange:
         if getSecondDerivitive(b) > 0 and getSecondDerivitive(b+step)<0:
             print('There is a POI at',b)
+            POItoDown+=1
+            data['POIDown', POItoDown] = b
+            if POItoUp>0:
+                print('Concave Up from',data['POIUp',POItoUp],'to',b)
+            
             
         if getSecondDerivitive(b) < 0 and getSecondDerivitive(b+step)>0:
             print('There is a POI at', b)
+            POItoUp += 1
+            data['POIUp', POItoUp] = b
+            if POItoDown>0:
+                print('Concave Down from',data['POIDown',POItoDown],'to',b)
+        
+        
+            
             
             
         b+=step
-     if getSecondDerivitive(lowerRange) > 0:
-        if localMaxes > 0:
-            print('Increasing',lowerRange,'to', data['upperMax',1])
+    if getSecondDerivitive(lowerRange) > 0:
+        if POItoDown > 0:
+            print('Concave Up',lowerRange,'to', data['POIDown',1])
         else:
-            print('Increasing',lowerRange,'to', upperRange)
+            print('Concave Up',lowerRange,'to', upperRange)
     if getSecondDerivitive(lowerRange) < 0:
-        if localMins > 0:
-            print('Decreasing',lowerRange,'to', data['lowerMin',1])
+        if POItoUp > 0:
+            print('Concave Down',lowerRange,'to', data['POIUp',1])
         
         else:
-            print('Decreasing',lowerRange,'to', upperRange)
+            print('Concave down',lowerRange,'to', upperRange)
     if getSecondDerivitive(upperRange)>0:
         if POItoUp>0:
             print('Concave up from',data['POIUp',POItoUp],'to',upperRange)
