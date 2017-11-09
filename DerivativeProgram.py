@@ -43,13 +43,21 @@ def getExtrema():
     while b<=upperRange:
         if getFirstDerivite(b) > 0 and getFirstDerivite(b+step)<0:
             print('There is an upper extrema at',b)
-            data['upperMax', 
+            localMaxes +=1
+            data['upperMax', localMaxes] = b
         if getFirstDerivite(b) < 0 and getFirstDerivite(b+step)>0:
             print('There is a lower extrema at',b)
-            
+            localMins +=1
+            data['lowerMin', localMins] = b
+
             
         b+=step
 getExtrema()
+
+def increasing():
+    if getFirstDerivite(lowerRange) > 0:
+        if upperMaxes > 0:
+            print('Increasing',lowerRange,'to', data['upperMax',1])
 
 
 def getPOI():
