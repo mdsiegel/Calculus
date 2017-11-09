@@ -68,10 +68,10 @@ def getExtrema():
         
         else:
             print('Decreasing',lowerRange,'to', upperRange)
-    if getFirstDerivitive(b)>0:
-        print('Increasing from',data['lowerMin',localMins],'to',b)
-    if getFirstDerivitive(b)<0:
-        print('Decreasing from',data['upperMax',localMaxes],'to',b)
+    if getFirstDerivite(upperRange)>0:
+        print('Increasing from',data['lowerMin',localMins],'to',upperRange)
+    if getFirstDerivite(upperRange)<0:
+        print('Decreasing from',data['upperMax',localMaxes],'to',upperRange)
 
 getExtrema()
 
