@@ -58,7 +58,10 @@ def increasing():
     if getFirstDerivite(lowerRange) > 0:
         if upperMaxes > 0:
             print('Increasing',lowerRange,'to', data['upperMax',1])
-
+    if getFirstDerivite(lowerRange) < 0:
+        if lowerMins > 0:
+            print('Decreasing',lowerRange,'to', data['lowerMin',1])
+increasing()
 
 def getPOI():
     b = lowerRange
