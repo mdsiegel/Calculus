@@ -84,6 +84,7 @@ def getPOI():
     while b<=upperRange:
         if getSecondDerivitive(b) > 0 and getSecondDerivitive(b+step)<0:
             print('There is a POI at',b)
+            
         if getSecondDerivitive(b) < 0 and getSecondDerivitive(b+step)>0:
             print('There is a POI at', b)
             
