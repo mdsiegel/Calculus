@@ -1,25 +1,28 @@
 #Matthew Siegel Frans Luttmer
 #DerivitveProgram.py
 
+from math import sin
 
 print(.001//1)
 
 precision = 0.000001
-terms = int(input('How many terms do you have?'))
 data = {}
-for i in range(1,terms+1):
-    data['coefficient',i] = float(input('Enter the coefficient'))
-    data['exponent',i] = float(input('Enter the exponent'))
+function = input('Enter a function')
+
 
 lowerRange = float(input('Enter the lower limit'))
 upperRange = float(input('Enter the upper limit'))
 step = float(input('Enter the step'))
 lowerRangeValue = 0
 #Getting the y-values of the original function
+
+
+
 def getValue(x):
-    y = 0
-    for i in range(1,terms+1):
-        y += (data['coefficient',i])*((x)**data['exponent',i])
+    x = x
+    Locfunction = function.lower()
+    y = eval(function)
+
     return y
 
     
