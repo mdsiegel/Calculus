@@ -1,7 +1,7 @@
 #Matthew Siegel Frans Luttmer
 #DerivitveProgram.py
 
-from math import sin
+from math import *
 
 print(.001//1)
 
