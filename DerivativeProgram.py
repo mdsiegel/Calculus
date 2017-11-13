@@ -1,7 +1,7 @@
 #Matthew Siegel Frans Luttmer
 #DerivitveProgram.py
 
-from math import sin,cos,tan
+from math import sin,cos
 from math import exp, expm1, e
 
 print(.001//1)
