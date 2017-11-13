@@ -1,7 +1,7 @@
 #Matthew Siegel Frans Luttmer
 #DerivitveProgram.py
 
-from math import *
+from math import sin,cos,tan
 
 print(.001//1)
 
