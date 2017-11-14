@@ -71,14 +71,12 @@ def getExtrema():
                 print('Decreasing from',data['upperMax',localMaxes],'to',b)
         if getFirstDerivite(b) == 0:
             if getFirstDerivite(b-step) > 0 and getFirstDerivite(b+step)<0:
-                b = (b+b+step)/2
                 print('There is an upper extrema at',b)
                 localMaxes +=1
                 data['upperMax', localMaxes] = b
                 if localMins>0:
                     print('Increasing from',data['lowerMin',localMins],'to',b)
             if getFirstDerivite(b-step) < 0 and getFirstDerivite(b+step)>0:
-                b = (b+b+step)/2
                 print('There is a lower extrema at',b)
                 localMins +=1
                 data['lowerMin', localMins] = b
@@ -118,6 +116,7 @@ def getPOI():
     POItoDown = 0
     while b<=upperRange:
         if getSecondDerivitive(b) > 0 and getSecondDerivitive(b+step)<0:
+            b = (b+b+step)/2
             print('There is a POI at',b)
             POItoDown+=1
             data['POIDown', POItoDown] = b
@@ -126,6 +125,7 @@ def getPOI():
             
             
         if getSecondDerivitive(b) < 0 and getSecondDerivitive(b+step)>0:
+            b = (b+b+step)/2
             print('There is a POI at', b)
             POItoUp += 1
             data['POIUp', POItoUp] = b
@@ -177,8 +177,10 @@ def meanValue():
     c = lowerRange
     while c<=upperRange:
         if getFirstDerivite(c) < avg and getFirstDerivite(c+step) > avg:
+            c = (c+c+step)/2
             print('The average slope is equal to the tangent line slope at',c)
         if getFirstDerivite(c) > avg and getFirstDerivite(c+step) < avg:
+            c = (c+c+step)/2
             print('The average slope is equal to the tangent line slope at',c)
         if getFirstDerivite(c) == avg:
             print('The average slope is equal to the tangent line slope at',c)
