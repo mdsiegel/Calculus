@@ -4,7 +4,7 @@
 from math import sin,cos, tan
 from math import exp, expm1, e
 
-print(.001//1)
+
 
 precision = 0.000001
 data = {}
