@@ -38,12 +38,6 @@ def getSecondDerivitive(x):
     secondDerivitive = (getFirstDerivite(x+precision)-getFirstDerivite(x-precision))/(2*precision)
     return secondDerivitive
 
-c = lowerRange
-while c<=upperRange:
-    print(getValue(c))
-    print('here is the der')
-    print(getSecondDerivitive(c))
-    c+=step
 
 
 def getExtrema():
