@@ -169,9 +169,10 @@ getPOI()
 
 def meanValue():
     avg = (getValue(lowerRange)-getValue(upperRange))/(lowerRange-upperRange)
-    print('The average slope is',avg)
+    print('The average slope is',round(avg,2))
     c = lowerRange
     while c<=upperRange:
+        print(round(getFirstDerivite(c),2))
         if round(getFirstDerivite(c),2) == round(avg,2):
             print('The average slope is equal to the tangent line slope at',c)
         c+=step
