@@ -157,12 +157,13 @@ def getPOI():
 getPOI()
 
 def meanValue():
-    avg = (getValue(lowerRange)+getValue(upperRange))/2
+    avg = (getValue(lowerRange)-getValue(upperRange))/(lowerRange-upperRange)
     print('The average slope is',avg)
     c = lowerRange
     while c<=upperRange:
         if getFirstDerivite(c) == avg:
             print('The x value where the slope is equal to the average slope is',c)
+        c+=step
 meanValue()
     
 
