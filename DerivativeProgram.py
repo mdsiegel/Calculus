@@ -161,7 +161,7 @@ def meanValue():
     print('The average slope is',avg)
     c = lowerRange
     while c<=upperRange:
-        if getFirstDerivite(c) == avg:
+        if round(getFirstDerivite(c),1) == round(avg,1):
             print('The x value where the slope is equal to the average slope is',c)
         c+=step
 meanValue()
