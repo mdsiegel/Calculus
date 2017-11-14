@@ -24,6 +24,14 @@ def getValue(x):
     y = eval(Locfunction)
 
     return y
+def getZeros():
+    l = lowerRange
+    while l<=upperRange:
+        if getValue(l) > 0 and getValue(l+step) < 0:
+            print('There is a zero at',l)
+        if getValue(l) < 0 and getValue(l+step) > 0:
+            print('There is a zero at',l)
+        if getValue(
 
     
 #Getting the values for the first derivitive
