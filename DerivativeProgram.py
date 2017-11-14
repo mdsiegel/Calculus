@@ -31,7 +31,13 @@ def getZeros():
             print('There is a zero at',l)
         if getValue(l) < 0 and getValue(l+step) > 0:
             print('There is a zero at',l)
-        if getValue(
+        if getValue(l) == 0:
+            if getValue(l-step) > 0 and getValue(l+step) < 0:
+                print('There is a zero at',l)
+            if getValue(l-step) < 0 and getValue(l+step) > 0:
+                print('There is a zero at',l)
+        l+=step
+getZeros()
 
     
 #Getting the values for the first derivitive
