@@ -32,10 +32,7 @@ def getZeros():
         if getValue(l) < 0 and getValue(l+step) > 0:
             print('There is a zero at',l)
         if getValue(l) == 0:
-            if getValue(l-step) > 0 and getValue(l+step) < 0:
-                print('There is a zero at',l)
-            if getValue(l-step) < 0 and getValue(l+step) > 0:
-                print('There is a zero at',l)
+           print('There is a zero at',l)
         l+=step
 getZeros()
 
