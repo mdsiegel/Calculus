@@ -22,7 +22,7 @@ lowerRangeValue = 0
 def getValue(x):
     x = x
     Locfunction = function.lower()
-    y = eval(function)
+    y = eval(Locfunction)
 
     return y
 
