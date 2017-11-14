@@ -169,7 +169,7 @@ getPOI()
 
 def meanValue():
     avg = (getValue(lowerRange)-getValue(upperRange))/(lowerRange-upperRange)
-    print('The average slope is',round(avg,2))
+    print('The average slope is',avg)
     c = lowerRange
     while c<=upperRange:
         if getFirstDerivite(c) < avg and getFirstDerivite(c+step) > avg:
