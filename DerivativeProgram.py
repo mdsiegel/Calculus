@@ -1,7 +1,7 @@
 #Matthew Siegel Frans Luttmer
 #DerivitveProgram.py
 
-from math import sin,cos
+from math import sin,cos, tan
 from math import exp, expm1, e
 
 print(.001//1)
@@ -38,6 +38,12 @@ def getSecondDerivitive(x):
     secondDerivitive = (getFirstDerivite(x+precision)-getFirstDerivite(x-precision))/(2*precision)
     return secondDerivitive
 
+c = lowerRange
+while c<=upperRange:
+    print(getValue(c))
+    print('here is the der')
+    print(getSecondDerivitive(c))
+    c+=step
 
 
 def getExtrema():
@@ -57,6 +63,21 @@ def getExtrema():
             data['lowerMin', localMins] = b
             if localMaxes>0:
                 print('Decreasing from',data['upperMax',localMaxes],'to',b)
+        if getFirstDerivite(b) == 0:
+            if getFirstDerivite(b) > 0 and getFirstDerivite(b+step)<0:
+                print('There is an upper extrema at',b)
+                localMaxes +=1
+                data['upperMax', localMaxes] = b
+                if localMins>0:
+                    print('Increasing from',data['lowerMin',localMins],'to',b)
+            if getFirstDerivite(b) < 0 and getFirstDerivite(b+step)>0:
+                print('There is a lower extrema at',b)
+                localMins +=1
+                data['lowerMin', localMins] = b
+                if localMaxes>0:
+                    print('Decreasing from',data['upperMax',localMaxes],'to',b)
+            
+            
         
             
         b+=step
@@ -102,7 +123,21 @@ def getPOI():
             data['POIUp', POItoUp] = b
             if POItoDown>0:
                 print('Concave Down from',data['POIDown',POItoDown],'to',b)
-        
+        if getSecondDerivitive(b) == 0:
+            if getSecondDerivitive(b-step) > 0 and getSecondDerivitive(b+step)<0:
+                print('There is a POI at',b)
+                POItoDown+=1
+                data['POIDown', POItoDown] = b
+                if POItoUp>0:
+                    print('Concave Up from',data['POIUp',POItoUp],'to',b)
+                
+            
+            if getSecondDerivitive(b-step) < 0 and getSecondDerivitive(b+step)>0:
+                print('There is a POI at', b)
+                POItoUp += 1
+                data['POIUp', POItoUp] = b
+                if POItoDown>0:
+                    print('Concave Down from',data['POIDown',POItoDown],'to',b)
         
             
             
