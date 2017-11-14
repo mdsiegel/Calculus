@@ -1,9 +1,9 @@
 #Matthew Siegel Frans Luttmer
 #DerivitveProgram.py
 
-from math import sin,cos, tan
+from math import sin,cos, tan, acos, asin, asin
 from math import exp, expm1, e
-
+from math import log, log10, sqrt, log2
 
 
 precision = 0.000001
