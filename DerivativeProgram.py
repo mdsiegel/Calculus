@@ -20,7 +20,6 @@ lowerRangeValue = 0
 
 
 def getValue(x):
-    x = x
     Locfunction = function.lower()
     y = eval(Locfunction)
 
@@ -156,6 +155,14 @@ def getPOI():
             print('Concave down from',data['POIDown',POItoDown],'to',upperRange)
 
 getPOI()
+
+def meanValue():
+    avg = (getValue(lowerRange)+getValue(upperRange))/2
+    print('The average slope is',avg)
+    c = lowerRange
+    while c<=upperRange:
+        
+    
 
 
 
