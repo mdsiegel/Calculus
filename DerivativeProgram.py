@@ -18,7 +18,7 @@ lowerRangeValue = 0
 #Getting the y-values of the original function
 
 
-
+#This function gets the y-values of the function that the user had inputed for any given value of x. The function 'eval' will 
 def getValue(x):
     Locfunction = function.lower()
     y = eval(Locfunction)
