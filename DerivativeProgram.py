@@ -18,12 +18,13 @@ lowerRangeValue = 0
 #Getting the y-values of the original function
 
 
-#This function gets the y-values of the function that the user had inputed for any given value of x. The function 'eval' will 
+#This function gets the y-values of the function that the user had inputed for any given value of x. The function 'eval' will find the solution to the mathmatic problem in it, and replace the variable 'x' with the x value that was used for the GetValue function.
 def getValue(x):
     Locfunction = function.lower()
     y = eval(Locfunction)
 
     return y
+#This will get all zeros of the function. It looks for points of the function where the y-value either equals zero or crosses over the x axis.
 def getZeros():
     l = lowerRange
     while l<=upperRange:
@@ -37,13 +38,13 @@ def getZeros():
 getZeros()
 
     
-#Getting the values for the first derivitive
+#Getting the values for the first derivitive. It does this by using the symetric difference stratagy. It finds the slope at the point by using the two points that either a little bit higher or a little bit lower, and finding the slope between those points.
 def getFirstDerivite(x):
     firstDerivitive = (getValue(x+precision)-getValue(x-precision))/(2*precision)
     return firstDerivitive
 
 
-#Getting the values for second derivitive
+#Getting the values for second derivitive. This also uses the symetric difference quotient. The only difference instead, is that the being used to find the derivitive is the first derivitive of the function, not the original function.
 def getSecondDerivitive(x):
     secondDerivitive = (getFirstDerivite(x+precision)-getFirstDerivite(x-precision))/(2*precision)
     return secondDerivitive
