@@ -27,6 +27,7 @@ def getValue(x):
 #This will get all zeros of the function. It looks for points of the function where the y-value either equals zero or crosses over the x axis.
 def getZeros():
     l = lowerRange
+    #This is a loop, that checks each point in the domain of the function, and checks if there is either a sign change after the point, or if the point is equal to zero.
     while l<=upperRange:
         if getValue(l) > 0 and getValue(l+step) < 0:
             print('There is a zero at',l)
