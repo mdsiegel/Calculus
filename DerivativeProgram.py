@@ -90,8 +90,9 @@ def getExtrema():
         
             
         b+=step
-    #increasing/decreasing
+    
     if getFirstDerivite(lowerRange) > 0:
+        #This is finding where the 
         if localMaxes > 0:
             print('Increasing',lowerRange,'to', data['upperMax',1])
         else:
