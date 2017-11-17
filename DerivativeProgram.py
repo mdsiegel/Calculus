@@ -59,12 +59,26 @@ def getExtrema():
     while b<=upperRange:
         if getFirstDerivite(b) > 0 and getFirstDerivite(b+step)<0:
             print('There is an upper extrema at',b)
+            t = lowerRange
+            while h< upperRange:
+                if getValue(t) < getValue(b):
+                    break
+                t+=step
+                if t >= upperRange:
+                    print(b,'is the absolute max')
             localMaxes +=1
             data['upperMax', localMaxes] = b
             if localMins>0:
                 print('Increasing from',data['lowerMin',localMins],'to',b)
         if getFirstDerivite(b) < 0 and getFirstDerivite(b+step)>0:
             print('There is a lower extrema at',b)
+            h = lowerRange
+            while h< upperRange:
+                if getValue(h) < getValue(b):
+                    break
+                h+=step
+                if h >= upperRange:
+                    print(b, 'is the absolute minimum')
             localMins +=1
             #This entry is saving the point where there is a lower extrema. This allows so that the intervals that are increasing or decreasing can be found.
             data['lowerMin', localMins] = b
