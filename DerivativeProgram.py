@@ -50,7 +50,7 @@ def getSecondDerivitive(x):
     return secondDerivitive
 
 
-
+#This is the function that finds all of the upper or lower extrema of the function. It searches for points where the first derivitive is changing signs. If the slope of the graph is going from positive to negative, or negative to positive, then that means that the point in between is an extrema.
 def getExtrema():
     b = lowerRange
     localMaxes = 0
