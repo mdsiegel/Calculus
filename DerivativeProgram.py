@@ -69,6 +69,7 @@ def getExtrema():
             data['lowerMin', localMins] = b
             if localMaxes>0:
                 print('Decreasing from',data['upperMax',localMaxes],'to',b)
+                #Since decreasing intervals also are from the last local max to the next local min, 
         if getFirstDerivite(b) == 0:
             if getFirstDerivite(b) > 0 and getFirstDerivite(b+step)<0:
                 print('There is an upper extrema at',b)
