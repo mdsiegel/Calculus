@@ -14,11 +14,11 @@ function = input('Enter a function')
 lowerRange = float(input('Enter the lower limit'))
 upperRange = float(input('Enter the upper limit'))
 step = float(input('Enter the step'))
-lowerRangeValue = 0
+
 #Getting the y-values of the original function
 
 
-#This function gets the y-values of the function that the user had inputed for any given value of x. The function 'eval' will find the solution to the mathmatic problem in it, and replace the variable 'x' with the x value that was used for the GetValue function.
+#This function gets the y-values of the function that the user has inputted for any given value of x. The function 'eval' will find the solution to the mathematical problem in it, and replace the variable 'x' with the x value that was used for the GetValue function.
 def getValue(x):
     Locfunction = function.lower()
     y = eval(Locfunction)
@@ -39,7 +39,7 @@ def getZeros():
 getZeros()
 
     
-#Getting the values for the first derivitive. It does this by using the symetric difference stratagy. It finds the slope at the point by using the two points that either a little bit higher or a little bit lower, and finding the slope between those points.
+#Getting the values for the first derivative. It does this by using the symmetric difference strategy. It finds the slope at the point by using the two points that either a little bit higher or a little bit lower, and finding the slope between those points.
 def getFirstDerivite(x):
     firstDerivitive = (getValue(x+precision)-getValue(x-precision))/(2*precision)
     return firstDerivitive
@@ -51,7 +51,7 @@ def getSecondDerivitive(x):
     return secondDerivitive
 
 
-#This is the function that finds all of the upper or lower extrema of the function. It searches for points where the first derivitive is changing signs. If the slope of the graph is going from positive to negative, or negative to positive, then that means that the point in between is an extrema.
+#This is the function that finds all of the upper or lower extrema of the function. It searches for points where the first derivative is changing signs. If the slope of the graph is going from positive to negative, or negative to positive, then that means that the point in between is an extrema.
 def getExtrema():
     b = lowerRange
     localMaxes = 0
@@ -66,20 +66,20 @@ def getExtrema():
         if getFirstDerivite(b) < 0 and getFirstDerivite(b+step)>0:
             print('There is a lower extrema at',b)
             localMins +=1
-            #This entry is saving the piont where there is a lower extrema. This allows so that the intervals that are increasing or decreasing can be found.
+            #This entry is saving the point where there is a lower extrema. This allows so that the intervals that are increasing or decreasing can be found.
             data['lowerMin', localMins] = b
             if localMaxes>0:
                 print('Decreasing from',data['upperMax',localMaxes],'to',b)
                 #This prins the decreasing interval between the last local max to the next local min
         if getFirstDerivite(b) == 0:
-            #This segmant is the same as the code above. This is a catch in case the slope at b is exatly 0. So it will now look for the sign change between the point right before b, and the point right after b.
-            if getFirstDerivite(b) > 0 and getFirstDerivite(b+step)<0:
+            #This segment is the same as the code above. This is a catch in case the slope at b is exactly 0. So it will now look for the sign change between the point right before b, and the point right after b.
+            if getFirstDerivite(b-step) > 0 and getFirstDerivite(b+step)<0:
                 print('There is an upper extrema at',b)
                 localMaxes +=1
                 data['upperMax', localMaxes] = b
                 if localMins>0:
                     print('Increasing from',data['lowerMin',localMins],'to',b)
-            if getFirstDerivite(b) < 0 and getFirstDerivite(b+step)>0:
+            if getFirstDerivite(b-step) < 0 and getFirstDerivite(b+step)>0:
                 print('There is a lower extrema at',b)
                 localMins +=1
                 data['lowerMin', localMins] = b
@@ -92,12 +92,14 @@ def getExtrema():
         b+=step
     
     if getFirstDerivite(lowerRange) > 0:
+        print('Local Min at',lowerRange)
         #This is finding where the 
         if localMaxes > 0:
             print('Increasing',lowerRange,'to', data['upperMax',1])
         else:
             print('Increasing',lowerRange,'to', upperRange)
     if getFirstDerivite(lowerRange) < 0:
+        print('Local Max at',lowerRange)
         if localMins > 0:
             print('Decreasing',lowerRange,'to', data['lowerMin',1])
         
@@ -186,7 +188,12 @@ def meanValue():
             print('The average slope is equal to the tangent line slope at',c)
         c+=step
 meanValue()
-    
+
+
+
+
+
+
 
 
 
