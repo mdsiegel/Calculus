@@ -65,6 +65,7 @@ def getExtrema():
         if getFirstDerivite(b) < 0 and getFirstDerivite(b+step)>0:
             print('There is a lower extrema at',b)
             localMins +=1
+            #This entry is saving the piont where there is a lower extrema. This allows so that the intervals that are increasing or decreasing can be found.
             data['lowerMin', localMins] = b
             if localMaxes>0:
                 print('Decreasing from',data['upperMax',localMaxes],'to',b)
