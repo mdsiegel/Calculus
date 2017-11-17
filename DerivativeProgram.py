@@ -69,8 +69,9 @@ def getExtrema():
             data['lowerMin', localMins] = b
             if localMaxes>0:
                 print('Decreasing from',data['upperMax',localMaxes],'to',b)
-                #Since decreasing intervals also are from the last local max to the next local min, 
+                #This prins the decreasing interval between the last local max to the next local min
         if getFirstDerivite(b) == 0:
+            #This segmant is the same as the code above. This is a catch in case the slope at b is exatly 0. So it will now look for the sign change between the point right before b, and the point right after b.
             if getFirstDerivite(b) > 0 and getFirstDerivite(b+step)<0:
                 print('There is an upper extrema at',b)
                 localMaxes +=1
